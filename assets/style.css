@@ -28,10 +28,11 @@ body {
 .text_typing { 
 	border-right: .1em solid rgb(199, 199, 199);
 	width: 16.5em; 
-	width: 21ch;
+    width: 62ch;
+    margin: 2rem 0.3rem;
 	white-space: nowrap;
 	overflow: hidden;
-    animation: typing 7s steps(21, end),
+    animation: typing 15s steps(62, end),
 	           blink-caret .5s step-end infinite alternate;
 }
 
