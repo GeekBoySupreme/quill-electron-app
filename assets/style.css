@@ -13,6 +13,9 @@
     }
 }
 
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+
 /*-----------------------------------*/
 
 body {
@@ -20,6 +23,16 @@ body {
     background-color: rgb(20, 20, 20);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
+}
+
+.text_typing { 
+	border-right: .1em solid rgb(199, 199, 199);
+	width: 16.5em; 
+	width: 21ch;
+	white-space: nowrap;
+	overflow: hidden;
+    animation: typing 7s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
 }
 
 .text_wrapper {
