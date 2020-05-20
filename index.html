@@ -5,15 +5,49 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <!-- COMMON TAGS -->
+    <title>Just Podcasts</title>
+    <!-- Search Engine -->
+    <meta name="description" content="Simple minimalist podcast app" />
+    <meta name="keywords" content="emoji, convert text to emoji, dango" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="theme-color" content="#333300" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/client.js" defer></script>
+
   </head>
   <body>
-    <h1>Yo World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <header>
+      <h1>
+        🎧 Just My Podcasts ┉┉┉༝✧
+      </h1>
+    </header>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <main>
+      <audio id="audio_file" preload="auto" type="audio/mpeg">
+        <source id="audioSource" type="audio/mp3" src="https://cdn.glitch.com/e7c24dd4-4eff-4e6a-9ea3-3515a2c690c0%2Fsong.mp3?1551547998468" />
+      </audio>
+      <div id="audio_player" style="">
+        <progress id="progress-bar" min="0" max="100" value="0">0% played</progress>
+        <button id="btnPlayPause" class="play" title="play" accesskey="P" onclick="playPauseAudio();">⏯</button>
+      </div>
+      <section class="podcasts">
+        <ul id="podcasts"></ul>
+      </section>
+      <button id="update" onclick="updatePodcasts();" class="mybutton">👀 Check for new Podcasts 👀</button>
+
+      <a href="/feed.json">Older podcasts</a>
+    </main>
+
+    <footer>
+      <hr />
+      Made with <a href="https://glitch.com">Glitch</a>, you can get your own simple podcast app here ➡️
+      <a href="https://just-podcasts.glitch.me/">Just Podcasts</a>!
+    </footer>
+
+     <!-- You can also require other files to run in this process -->
+     <script src="./renderer.js"></script>
   </body>
 </html>
