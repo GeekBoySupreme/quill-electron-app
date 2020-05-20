@@ -1,22 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
+
+/*---------- Animation---------------*/
+@keyframes fadeIn {
+    from {
+        top: 20px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+/*-----------------------------------*/
+
 body {
     color: white;
     background-color: rgb(20, 20, 20);
     font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
 }
 
 .text_wrapper {
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
     color: white;
     background-color: rgb(20, 20, 20);
     top: -10px;
+    margin: 5px auto;
+    padding: 10px;
 }
 
 .primary_text_bubble {
-    color: rgb(250, 228, 106);
-    background: rgba(248, 180, 32, 0.11);
-    padding: 10px 20px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.11);
+    padding: 8px 8px;
     border-radius: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s;
 }
