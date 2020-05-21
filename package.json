@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "quill",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An exploration in conversation and typography",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/electron/quill-electron-app",
   "keywords": [
     "Electron",
     "quick",
@@ -18,15 +18,5 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0"
-  },
-  "dependencies": {
-    "express": "^4.16.4",
-    "request": "^2.88.0",
-    "node-podcast-parser": "^2.3.0",
-    "express-rate-limit": "^3.3.2",
-    "axios": "^0.18.0"
-  },
-  "engines": {
-    "node": "8.x"
   }
 }

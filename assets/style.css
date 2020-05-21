@@ -14,32 +14,32 @@
 }
 
 @keyframes typing { from { width: 0; } }
-@keyframes blink-caret { 50% { border-color: transparent; } }
+@keyframes blink-caret { 50% { border-right-color: transparent; } }
 
 /*-----------------------------------*/
 
 body {
-    color: white;
+    color: rgb(192, 192, 192);
     background-color: rgb(20, 20, 20);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
 }
 
 .text_typing { 
-	border-right: .1em solid rgb(199, 199, 199);
+	border-right: 0em solid rgb(199, 199, 199);
 	width: 16.5em; 
     width: 62ch;
     margin: 2rem 0.3rem;
 	white-space: nowrap;
 	overflow: hidden;
     animation: typing 15s steps(62, end),
-	           blink-caret .5s step-end infinite alternate;
+	           blink-caret .5s step-end 18s alternate;
 }
 
 .text_wrapper {
     width: 80vw;
     height: 100vh;
-    color: white;
+    color: rgb(192, 192, 192);
     background-color: rgb(20, 20, 20);
     top: -10px;
     margin: 5px auto;
@@ -48,7 +48,7 @@ body {
 
 .primary_text_bubble {
     position: relative;
-    color: rgb(255, 255, 255);
+    color: rgb(192, 192, 192);
     background: rgba(255, 255, 255, 0.11);
     padding: 8px 8px;
     border-radius: 50px;
@@ -57,4 +57,10 @@ body {
     align-items: center;
     justify-content: center;
     animation: fadeIn 0.4s;
+}
+
+.blue_highlight {
+    border-radius: 1px;
+    border-left: 3px solid rgb(0,101,202);
+    padding: 4px 8px;
 }
