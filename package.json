@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/quill-electron-app",
+  "repository": "https://github.com/geekboysupreme/quill-electron-app",
   "keywords": [
     "Electron",
     "quick",
